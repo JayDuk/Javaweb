@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8 ">
+    <title>HomePage</title>
+
+    <link href="../../static/css/file_page.css" rel="stylesheet">
+</head>
+
+<body>
+<table>
+    <tr>
+        <th>文件名</th>
+        <th>文件大小</th>
+        <th>文件描述</th>
+        <th>上传时间</th>
+        <th>目录</th>
+
+    </tr>
+    <tr th:if="${#lists.isEmpty(session.fileList)}">
+        <td align="center" colspan="7">empty set</td>
+    </tr>
+
+    <tr th:each=" file: ${session.fileList}" th:unless="${#lists.isEmpty(session.fileList)}">
+        <td th:text="${file. ()}"> name</td>
+        <td th:text="${file.getSize()}"> size</td>
+        <td th:text="${file.getDescribe()}"> desc</td>
+        <td th:text="${file.getUpdateTime()}"> updatetime</td>
+        <td th:text="${file.getAddress()}"> address</td>
+        <td class="opbtn">edit</td>
+        <td class="opbtn">del</td>
+    </tr>
+</table>
+
+<a href="/javaweb/login">登录</a>
+
+</body>
+
+</html>

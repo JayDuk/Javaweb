@@ -1,0 +1,36 @@
+th,
+td {
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+th {
+  font-family: "宋体";
+}
+
+td {
+  font-family: "楷体";
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: (calc((100% - width) / 2));
+}
+
+tr:hover {
+  background-color: rgb(186, 186, 186);
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+.opbtn {
+  text-decoration: underline;
+  padding-left: 5px;
+  padding-right: 5px;
+}
